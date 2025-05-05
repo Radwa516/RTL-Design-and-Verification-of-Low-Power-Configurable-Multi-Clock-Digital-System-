@@ -73,13 +73,6 @@ Clk_Div U0_TX_CLK
 .o_div_clk(TX_CLK)
 );
 
-//////////////////////to use TX_CLK in the driver
-assign U_intf.TX_CLK = U0_UART.TX_CLK;
-assign U_intf.Busy  = U0_UART.Busy;
-assign U_intf.Div_Ratio  = U0_Reg_File.REG2;
-assign U_intf.P_Data  = U0_UART.P_DATA;
-assign U_intf.RX_Valid  = U0_UART.DATA_VALID;
-
 ///////////////////////////////RX_CLK////////////////////////////
 Clk_Div U0_RX_CLK
 (.i_ref_clk(UART_CLK), 
