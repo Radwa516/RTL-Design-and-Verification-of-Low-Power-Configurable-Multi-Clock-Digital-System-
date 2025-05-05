@@ -28,17 +28,17 @@ assign U_intf.RX_Valid  = U0_UART.DATA_VALID;
 
 initial 
 	begin
-	   initialization();
+	  initialization();
 
-	   uvm_config_db#(virtual INTF_UART)::set(null,"uvm_test_top","my_vif",U_intf);
-	   run_test("Test");
+	  uvm_config_db#(virtual INTF_UART)::set(null,"uvm_test_top","my_vif",U_intf);
+	  run_test("Test");
 	end   
 
 ////////////////////initialization of the inputs///////////////////
 task initialization;
-     begin
-	U_intf.RST = 'b0;
-        U_intf.RX_IN = 'b1;
+	begin
+	  U_intf.RST = 'b0;
+          U_intf.RX_IN = 'b1;
      end
 endtask
 
