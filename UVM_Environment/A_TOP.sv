@@ -20,11 +20,11 @@ System_Top # (.DATA_WID_S(DATA_WIDTH_TB),
 );
 
 //////////////////////Interal Tap Points////////////////////
-assign U_intf.TX_CLK 	= U0_UART.TX_CLK;
-assign U_intf.Busy   	= U0_UART.Busy;
-assign U_intf.Div_Ratio = U0_Reg_File.REG2;
-assign U_intf.P_Data  	= U0_UART.P_DATA;
-assign U_intf.RX_Valid  = U0_UART.DATA_VALID;
+assign U_intf.TX_CLK 	= DUT.U0_UART.TX_CLK;
+assign U_intf.Busy  	= DUT.U0_UART.Busy;
+assign U_intf.Div_Ratio = DUT.U0_Reg_File.REG2;
+assign U_intf.P_Data  	= DUT.U0_UART.P_DATA;
+assign U_intf.RX_Valid  = DUT.U0_UART.DATA_VALID;
 
 initial 
 	begin
